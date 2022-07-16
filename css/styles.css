@@ -887,13 +887,14 @@ margin-bottom: 0px;
   /* модальное окно для завки на ос */
   .button-close {
     display: block;
-    position: absolute;
-    top: 8px;
+    position: absolute; 
+    top: 8px; 
     right: 8px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
+    padding: 0; 
+    
+    width: 30px; 
+    height: 30px; 
+   
     cursor: pointer;      
 
     border-radius: 50%;
@@ -946,12 +947,15 @@ margin-bottom: 0px;
     margin-bottom: 4px;
 
     color:var(--color-buttom);
-    
-        
+            
+  }
+
+  .form-block-icon{
+    position: relative;
   }
 
   .form-input {
-    position: relative;
+    
     height: 40px;
     background: var(--color-fon);
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -981,16 +985,16 @@ margin-bottom: 0px;
   }
   .form-icon-person {
     position:absolute;
-    left: 50px;
+    left: 1px;
    
-    transform:translate(0, 150%); 
+    transform:translate(50%,50%); 
     
   }
 
-
-   .dogovor {
+  .dogovor {
     color: var(--color-acsent);
   }
+
   .icon-check {
     color: var(--color-buttom);
   }
@@ -1030,37 +1034,46 @@ margin-bottom: 0px;
   }
   .form-block:hover {
    fill: var(--color-acsent);
-  }
-  .form-block:focus {
-    outline: 0;
-    fill: var(--color-acsent);
-  }
-  .form-block:hover .form-input {
-    border-color: var(--color-acsent);
+   border-color: var(--color-acsent);
   }
 
-  .form-block:focus .form-input {
-    outline: 0;
+  .form-block:focus  {
+    outline: 0;    
     border-color: var(--color-acsent);
   }
+  .form-input:focus+ .form-icon-person{
+    fill: var(--color-acsent);
+  }
+  
+    
   .form-textarea:hover {
+    outline: 0;
     border-color: var(--color-acsent);
   }
   
   .form-textarea:focus {
     outline: 0;
     border-color: var(--color-acsent);
-  }
-  .form-input:focus {
     
+  }
+  .form-input:focus {    
     outline: 0;
     border-color: var(--color-acsent);
-   
-  }
+    
+   }
 
+   
+  
+  .modal-terms {
+    margin-top: 20px;
+  }
+  
   
   /* скрывает соглашение на условия договора на форме*/
 
-.modal-terms  {
+.icon-check {
   opacity: 0;
+  font-size: 0;
 }
+
+
