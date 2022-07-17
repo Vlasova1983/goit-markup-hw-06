@@ -860,38 +860,11 @@ margin-bottom: 0px;
     border-radius: 4px;
 
   }
-  .modal-button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0;
-    margin: 0;
-
-    border-radius: 50%;
-    background: #FFFFFF;
-    border: 3px solid rgba(0, 0, 0, 0.1);  
-    
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .modal-button:hover{
-    border: 0;
-    background-color: var(--color-buttom);
-  }
-
-  /* модальное окно для завки на ос */
+  
   .button-close {
+    position: relative;
     display: block;
-    position: absolute; 
-    top: 8px; 
-    right: 8px;
-    padding: 0; 
-    
+          
     width: 30px; 
     height: 30px; 
    
@@ -905,6 +878,19 @@ margin-bottom: 0px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     
   }
+
+  .posision-button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+ .modal-icon-close {
+  position: absolute; 
+  transform: translate(-50%, -50%);
+ }
+
+  
+
   .button-close:hover {   
     fill: var(--color-acsent);
   }
@@ -916,7 +902,7 @@ margin-bottom: 0px;
     
   }
 
-  .heder-modal-two {
+  .heder-modal {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -1065,15 +1051,48 @@ margin-bottom: 0px;
    
   
   .modal-terms {
+    position: relative;
     margin-top: 20px;
+    text-align: center;
   }
   
+  .icon-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    
+    color:var(--color-buttom);
+            
+  }
+  .checkbox {
+    position: absolute;
+    top: 5px;
+    left: 0;
+   
+    appearance: none;
+    width: 16px;
+    height: 15px;
+    
+  }
+  .modal-icon-svg{
+    position: absolute;
+    top:5px;
+    left: 0;
+    border-radius: 4px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid black;
+
+  }
+
+  .checkbox:checked + .modal-icon-svg  {
+    background-image: url('../images/icon\ check\ .svg');
+    border: 0;
+     }
+
+
+
+
   
-  /* скрывает соглашение на условия договора на форме*/
-
-.icon-check {
-  opacity: 0;
-  font-size: 0;
-}
-
 
